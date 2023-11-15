@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 50px;
+            object-fit: cover;
+            object-position: left;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: fit-content;
+            margin: 20px auto;
+        }
+        .button button {
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 72px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        label,
+        select {
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 1080px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="\owl_express_header_2010.svg" alt="Owl Express Header Image">
+    <div class="container">
+        <h1>Class Schedule Search</h1>
+        <p>Use the selection options below to search the class schedule for the term displayed above. You can use the
+            scroll bars on scroll boxes to view multiple values. You may choose any combination of fields to narrow your
+            search.<br />
+            <br />
+            <b>Narrow your course search:</b><br />
+            Choose any combination of fields to narrow your search, but you must select at least one subject.
+            <br />
+            Note: To search for online courses scroll down to Instructional Method and select either Online - 100%,
+            Online - 95% or Hybrid and click on Class Search button.
+            <br />
+            Note: To search for eCore courses, scroll down to Campus and select eCore and click on Class Search button.
+        </p>
+
+        <b>When your selection is complete, click "Search" to perform the search.</b>
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+            <option value="all">All</option>
+            <!-- other subjects can be added here -->
+        </select>
+
+        <label for="courseNumber">Course Number:</label>
+        <select id="courseNumber" name="courseNumber">
+            <option value="all">All</option>
+            <!-- other course numbers can be added here -->
+        </select>
+
+        <label for="title">Title:</label>
+        <select id="title" name="title">
+            <option value="all">All</option>
+            <!-- other titles can be added here -->
+        </select>
+
+        <label for="instructionMethod">Instruction Method:</label>
+        <select id="instructionMethod" name="instructionMethod">
+            <option value="all">All</option>
+            <option value="OnCampus">On Campus</option>
+            <option value="Online100">100% Online</option>
+            <option value="Online95">95% Online</option>
+            <option value="Hybrid33">Hybrid - 33% Online</option>
+            <option value="Hybrid50">Hybrid - 50% Online</option>
+            <option value="Hybrid66">Hybrid - 66% Online</option>
+            <!-- other instruction methods can be added here -->
+        </select>
+
+        <label for="campus">Campus:</label>
+        <select id="campus" name="campus">
+            <option value="all">All</option>
+            <option value="Kennesaw">Kennesaw Campus</option>
+            <option value="Marietta">Marietta Campus</option>
+            <option value="eCore">eCore</option>
+            <option value="KSU Center">KSU Center</option>
+            <option value="Galleria">Galleria Center</option>
+            <option value="CitySprings">City Springs Complex</option>
+            <option value="Paulding/Dallas">Paulding/Dallas Center</option>
+            <!-- other campus options can be added here -->
+        </select>
+
+        <label for="courseLevel">Course Level:</label>
+        <select id="courseLevel" name="courseLevel">
+            <option value="all">All</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <!-- other course levels can be added here -->
+        </select>
+
+        <label for="term">Term:</label>
+        <select id="term" name="term">
+            <option value="all">All</option>
+            <!-- other terms can be added here -->
+        </select>
+
+        <label for="days">Days:</label>
+        <select id="days" name="days">
+            <option value="all">All</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <!-- other days can be added here -->
+        </select>
+    </div>
+
+    <div class="button">
+        <button type="submit">Search</button>
+        <button type="submit">Reset</button>
+    </div>
+
+</body>
+
+</html>
